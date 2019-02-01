@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+      <title>Messiah</title>
+    </head>
+	<body>
+		<div class="heading">
+			<h1>API</h1>
+		</div>
+		<nav>
+	    	<div class="nav-wrapper" style="background: #000066;">
+		      <a href="#!" class="brand-logo"><img src="img/for-dark-logo-bc.png"></a>
+		      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+		      <ul class="right hide-on-med-and-down">
+		        <li><a href="index.html">Home</a></li>
+		        <li><a href="about.html">About Us</a></li>
+		        <li><a href="dashboard.html">Dashboard</a></li>
+		        <li class="active"><a href="api.html">API service</a></li>
+		        <li><a href="sms.html">SMS Services</a></li>
+				<li><a href="scope.html">Further Scope</a></li>
+				<li><a href="Login.html">Login</a></li>
+			  </ul>
+	    	</div>
+  		</nav>
+
+  			<ul class="sidenav" id="mobile-demo">
+    			<li><a href="index.html">Home</a></li>
+		        <li><a href="about.html">About Us</a></li>
+		        <li><a href="dashboard.html">Dashboard</a></li>
+		        <li class="active"><a href="api.html">API service</a></li>
+		        <li><a href="sms.html">SMS Services</a></li>
+		        <li><a href="scope.html">Further Scope</a></li>
+		        <li><a href="Login.html">Login</a></li>
+  </ul>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript">
+      	$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+			</script>
+			
+			<p style="padding:10px; color: #fff; font-size: 20px;"> Messiah is open for developers to use our data. We offer a RESTful API to develop apps for developers. See documentation below: </p>
+			<table class="highlight striped" style= " width : 85%; background: #ffff99; margin: 0 auto;">
+				<thead>
+				<th>
+					<tr>
+						<td><strong>PATH</strong> </td>
+						<td><strong> ARGS </strong></td>
+						<td><strong> METHOD </strong></td>
+						<td><strong> USE </strong></td>
+					</tr>
+				</th>
+				</thead>
+				<tbody>
+				<tr>
+					<td> /history </td>
+					<td> City/Country </td>
+					<td> GET </td>
+					<td> Lists the history of past five random disasters in {ID, Date(dd/mm/yyyy), City, Country, Magnitude, Severity, Type}. </td>
+				</tr>
+				<tr>
+					<td> /history_full </td>
+					<td> City/Country </td>
+					<td> GET </td>
+					<td> Lists the history of all past disasters in {ID, Date(dd/mm/yyyy), City, Country, Magnitude, Severity, Type}. </td>
+				</tr>
+				<tr>
+						<td> /show_random_facts </td>
+						<td> - </td>
+						<td> GET </td>
+						<td> Show some random fact based on past year data static as in our homepage. </td>
+				</tr>
+				<tr>
+						<td> /random_facts </td>
+						<td> - </td>
+						<td> GET </td>
+						<td> Returns {Deaths, Year, Type} randomly in raw format. </td>
+				</tr>
+				<tr>
+						<td> /predict_eq_mag </td>
+						<td> Lattitude, Longitude, Depth, Date(optional) </td>
+						<td> GET </td>
+						<td> Returns magnitude(float64) of possible earthquake in current or given date. </td>
+				</tr>
+			</tbody>
+			</table>
+		</body>
+  </html>
+        

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/easy-autocomplete.min.css">
+    <link rel="stylesheet" type="text/css" href="css/flags.css">
+    <link rel="stylesheet" type="text/css" href="css/easy-autocomplete.themes.min.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+	<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+      <title>Messiah</title>
+    </head>
+	<body>
+		<nav>
+	    	<div class="nav-wrapper" style="background: #000066;">
+		      <a href="#!" class="brand-logo"><img src="img/for-dark-logo-bc.png"></a>
+		      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+		      <ul class="right hide-on-med-and-down">
+		        <li class="active"><a href="index.html">Home</a></li>
+		        <li><a href="about.html">About Us</a></li>
+		        <li><a href="dashboard.html">Dashboard</a></li>
+		        <li><a href="api.html">API service</a></li>
+            <li><a href="sms.html">SMS Services</a></li>
+                <li><a href="scope.html">Further Scope</a></li>
+                <li><a href ="Login.html">Login</a></li>
+			  </ul>
+	    	</div>
+  		</nav>
+
+      <canvas id="globe"></canvas>
+      <pre style="font-size: 2rem; color: #fff;">Do you know
+that <span id="number" style="color: #ffff99;">63</span> people
+died in <span id="year" style="color: #ffff99;">1900s</span>
+due to <span id="calamity" style="color: #ffff99;">Flood</span>s?</pre>
+
+    <pre style="font-size: 1.5rem; padding-bottom: 0; margin-bottom: 0;color: #fff">Enter your city/country, then press Enter</pre>
+    <form action="dashboard.html" method="get">
+      <div class="row center">
+          <div class="input-field col s12 l4 m4" style="color: #fff">
+            <input id="textarea1" type="text" name="Country">
+          </div>
+
+      </div>
+
+    </form>
+	<div class = "row center">
+		<div class ="col s12 l4 m6"></div>
+		<div class ="col s12 l8 m6">	
+		<a id="geoloc" style ="min-width:200px;border: 2px solid #fff;border-radius: 5px;padding:12px;background:#00e;">
+			<span style="font-size: 1.2rem;color: #fff"><i class="material-icons">room</i> Use your current location</span>
+		</a>
+		</div>
+	</div>
+  
+
+      <div class="row center">
+    <div class="col s12 m12 l12">
+      <div class="card indigo darken-3">
+        <div class="card-content white-text">
+          <span class="card-title">What is Messiah?</span>
+          We are planning to build a service to help save lives and prevent economic losses through mechanisms to predict, prevent, or manage the impact of natural disasters, as accurately as possible and feasible using the dataset procurable.
+          <br>
+          To start with, the user needs to enter the name of the city/country, he/she wants to enquire about, in the above search bar. After pressing Enter, the user will be guided to the various services we provide, in the Dashboard. The service would:
+            <ul style="text-align:left;margin-left:3%;" class="yellow-text">
+            <li style="list-style-type:circle;">Provide real-time map(satellite imaging too) of the user's given location, where he/she can get a glimpse of the calamity. </li>
+            <li style="list-style-type:circle;">Predict the magnitude of a natural disaster, in the given location, set by the user.</li>
+            <li style=list-style-type:circle;>Provide the user with valuable precautions which can be implemented well in advance based on the geography and topography of the location the user resides in. These tips will be such as "build houses with x type of pillars to ensure sturdiness at times of earthquake".</li>
+            <li style=list-style-type:circle;>Show data of previous natural disasters of the area, and grossly present the damage done by them to property and life.</li>
+            <li style=list-style-type:circle;> API for developers to work further on the project </li>
+            <li style=list-style-type:circle;> SMS services for the user to connect with his family members in times of distress. </li>
+            </ul>
+            <i><span>The Current Location button isn't working, because of HTTP security issues.</span></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  			<ul class="sidenav" id="mobile-demo">
+    			<li class="active"><a href="index.html">Home</a></li>
+		        <li><a href="about.html">About Us</a></li>
+		        <li><a href="dashboard.html">Dashboard</a></li>
+		        <li><a href="api.html">API service</a></li>
+            <li><a href="sms.html">SMS Services</a></li>
+                <li><a href="scope.html">Further Scope</a></li>
+                <li><a href="Login.html">Login</a></li>
+  </ul>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+      <script type="text/javascript" src="https://d3js.org/d3-geo.v1.min.js"></script>
+      <script type="text/javascript" src="https://d3js.org/topojson.v2.min.js"></script>
+      <script type="text/javascript" src="https://bl.ocks.org/mbostock/raw/7ea1dde508cec6d2d95306f92642bc42/6aac691494f752142a67cc43c51a0fd09896dbd4/versor.js"></script>
+      <script type="text/javascript" src="js/rotate.js"></script>
+      
+      <script type="text/javascript" src="js/jquery.easy-autocomplete.min.js"></script>
+      <script type="text/javascript">
+      	$(document).ready(function(){
+   		    $('.sidenav').sidenav();
+			//sending users country and region
+			$('#geoloc').attr('href', function(index) {
+				return "dashboard.html" + '?Country='+geoplugin_countryName()+'&region='+geoplugin_region();
+			});
+ 		 });
+
+      </script>
+    <script>
+        var options = {
+              url: "resources/countries.json",
+              getValue: "name",
+              list: {
+                  match: {
+                      enabled: true
+                  },
+                  maxNumberOfElements: 8
+              },
+            template: {
+                  type: "custom",
+                method: function (value, item) {
+                    return "<span class='flag flag-" + (item.code).toLowerCase() + "' ></span>" + value;
+                }
+            },
+              theme: "round"
+          };
+        // alert(options.list);
+          $("#textarea1").easyAutocomplete(options);
+    </script>
+    <script>
+
+        const Http = new XMLHttpRequest();
+        const url = 'https://cfd-backend.herokuapp.com/random_facts';
+        Http.open("GET", url);
+        Http.send();
+
+        // alert("here");
+        Http.onreadystatechange = (err) => {
+            // alert(resp.json());
+            var data=eval("(" + Http.responseText + ")");
+            // alert(data.length);
+            // alert(data[0][0]);
+            // console.log(data);
+            // alert(resp.text());
+            var data_num = [];
+            var data_dec = [];
+            var data_cal = [];
+
+            // alert(data[0][0]);
+            for (var i = 0; i < data.length; i++) {
+                data_num.push(data[i][0]);
+                data_dec.push(data[i][1]);
+                data_cal.push(data[i][2].toLowerCase());
+            }
+
+            function rotateTerm() {
+
+                var ct = $("#number").data("term") || 0;
+                var ct2 = $("#year").data("term") || 0;
+                var ct3 = $("#calamity").data("term") || 0;
+
+
+                $("#number").data("term",
+                    ct == data.length - 1 ? 0 : ct + 1).text(data_num[ct])
+                    .fadeIn().delay(2000).fadeOut(200, rotateTerm);
+
+                $("#year").data("term",
+                    ct2 == data.length - 1 ? 0 : ct2 + 1).text(data_dec[ct2])
+                    .fadeIn().delay(2000).fadeOut(200, rotateTerm);
+
+                $("#calamity").data("term",
+                    ct3 == data.length - 1 ? 0 : ct3 + 1).text(data_cal[ct3])
+                    .fadeIn().delay(2000).fadeOut(200, rotateTerm);
+
+            }
+
+            console.log("here");
+
+            $(rotateTerm);
+        }
+    </script>
+    </body>
+  </html>
+        
