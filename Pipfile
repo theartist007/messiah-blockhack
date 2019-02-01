@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+coloredlogs = "*"
+itsdangerous = "*"
+tensorflow = "*"
+pandas = "*"
+gunicorn = "*"
+reverse-geocode = "*"
+future = "*"
+flask = "*"
+flask-cors = "*"
+
+[requires]
+python_version = "3.6"
