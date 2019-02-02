@@ -105,13 +105,13 @@ The service would:
 
 2. Show data of previous natural disasters of the area, and grossly present the damage done by them to property and life.
 
-3. Show a map interface showing present location of the user (and plausible relief camp placements, and the shortest route to the closest one[WIP])
+3. _Show a map interface showing present location of the user (and plausible relief camp placements, and the shortest route to the closest one[WIP])_
 
 4. Provide the user with valuable precautions which can be implemented well in advance based on the geography and topography of the location the user resides in. These tips will be such as "build houses with x type of pillars to ensure sturdiness at times of earthquake".
 
-5. Provide SMS services to help connect with your family members at times of distress, even without internet.
+5. Provide SMS services to help connect with your family members at times of distress, even without internet._Due to financial and time constraints, only the frontend is made. The service is yet to be activated._
 
-6. Provide personalised services to users, to match the needy with the volunteers at the right places quickly.
+6. _Provide personalised services to users, to match the needy with the volunteers at the right places quickly._[WIP]
 
 ### How does it work
 
@@ -125,9 +125,9 @@ Each bullet point has been explained with accordance to its order in the previou
 
 4. Dividing the area based on disaster data; such as earthquake-prone, flood-prone and then accordingly devising a set of precautions and instructions which can help lower the damage done to life, property and other assets.
 
-5. We use RapidSMS API, an Oen source API to send text messages from any web service to a peripheral, or vice-versa.
+5. _We use RapidSMS API, an Oen source API to send text messages from any web service to a peripheral, or vice-versa._
 
-6. A separate "specific" dashboard shall be created for users / relief providers to interact and list the items they need/provide and the list is curated in a database and will be used in sync to match the needy with the providers at the right places and quickly.
+6. _A separate "specific" dashboard shall be created for users / relief providers to interact and list the items they need/provide and the list is curated in a database and will be used in sync to match the needy with the providers at the right places and quickly._
 
 ### What dataset(s) are we using
 
