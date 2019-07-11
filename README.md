@@ -1,4 +1,5 @@
 # BlockHack Hackathon, GES 2019 (Team Sorcerers)
+Messiah is our bronze winning submission to StreetHack BlockHack Hackathon, in Global Entrepreneurship Summit 2019.
 ![Messiah logo](readme_logo.jpeg)
 
 ## Contributing
